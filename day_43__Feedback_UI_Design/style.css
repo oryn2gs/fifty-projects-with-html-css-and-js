@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --bg-color: #fef9f2;
+    --button-bg-clr: #302d2b;
+    --bg-gradient: linear-gradient(to right, #d4d3dd, #efefbb);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Muli', sans-serif;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel-container {
+    background-color: #fff;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 30px;
+    font-size: 90%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.ratings-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: 20px 0;
+}
+
+.rating {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.rating:hover,
+.rating.active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.rating img {
+    width: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.rating:hover small,
+.rating.active small {
+    opacity: 0.8;
+    display: inline-block;
+}
+
+/* btn */
+.panel-container .btn {
+    border: none;
+    background-color: var(--button-bg-clr);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* icon */
+
+.fa-heart {
+    font-size: 30px;
+    color: red;
+}

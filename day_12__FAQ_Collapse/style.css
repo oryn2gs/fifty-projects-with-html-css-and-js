@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #efeded;
+    --border-color: #9fa4a8;
+    --font-awesome-color1: #2ecc71;
+    --font-awesome-color2: #3498db;
+}
+
+body {
+    font-family: 'Muli', serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+
+}
+
+h2 {
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq {
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+
+    box-shadow: 
+    0 2px 5px rgba(0, 0, 0 , 0.3), 
+    0 2px 5px rgba(0, 0, 0 , 0.3);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.5s linear;
+
+}
+
+.faq-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.faq-text {
+    margin-top: 30px;
+    font-size: 14px;
+    display: none;
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+/* Comment icons */
+.faq.active::before,
+.faq.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 7rem;
+    opacity: .3;
+    color: var(--font-awesome-color1);
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+}
+
+.faq.active::before {
+    color: var(--font-awesome-color2);
+    top: -20px;
+    left: -20px;
+}
+
+/* Toggle Button */
+
+.faq-toggle {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+/* cross btn */
+.faq .faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    display: block;
+    background-color: var(--border-color);
+    color: #fff;
+
+    height: 30px;
+    width: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* down btn */
+
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+
+

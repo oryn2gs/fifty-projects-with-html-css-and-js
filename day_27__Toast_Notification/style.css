@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #fff;
+    
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  background-color: rebeccapurple;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    color: rebeccapurple;
+    font-weight: 500;
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.toasts {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.toast {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.toast.info {
+    color: rebeccapurple;
+}
+
+.toast.success {
+    color: green;
+}
+
+.toast.error {
+    color: red;
+}
+
+
+
+
+

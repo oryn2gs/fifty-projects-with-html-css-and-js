@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {    
+    --bg-color: #2a2a72;
+    --primary-color: #4c2885;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.user-form {
+    max-width: 800px;
+    width: 100%;
+}
+
+.user-form input {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.user-form input:focus {
+    outline: none;
+}
+
+.user-form input::placeholder {
+    color: #aaa;
+}
+
+.card {
+    width: 700px;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    gap: 2rem;
+}
+
+.avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--bg-color);
+
+}
+
+.card .user-info {
+    color: #eee;
+}
+
+.card .user-info h2{
+    font-size: 1.5rem;
+}
+
+.card .user-info p{
+    font-size: 1rem;
+}
+
+.user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.user-info ul strong {
+    margin-left: .25rem;
+    font-size: 0.9rem;
+}
+
+#repos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+#repos .repo {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--bg-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-size: .9rem;
+    margin: .5rem;
+}
+
+@media(max-width: 500px) {
+    .card {
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .user-form {
+        max-width: 400px;
+    }
+}

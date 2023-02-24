@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {    
+    --bg-color: #7bdaf3;
+    --button-bg-color: #9ec862;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  height: 100vh;
+  background-color: var(--bg-color);
+
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.add {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+
+    padding: 0.5rem 1rem;
+    background-color: var(--button-bg-color);
+    color: #fff;
+    border-radius: 3px;
+}
+
+.add .fa-plus {
+    margin-right: 5px;
+}
+
+.note {
+    background-color: #fff;
+    margin: 6rem;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .23);
+}
+
+.note .tools {
+    background-color: var(--button-bg-color);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.tools .edit {
+    margin-right: 10px;
+}
+
+.main {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 20px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+

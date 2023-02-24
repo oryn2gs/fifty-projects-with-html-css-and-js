@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: rgba(88, 23, 116, 0.879);
+    --primary-color: rgba(121, 60, 151, 0.3);
+    --font-color: #fff;
+}
+
+body {
+    font-family: 'Muli', serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--font-color);
+    background-color: var(--main-color);
+}
+
+.container {
+    background: var(--primary-color);
+    width: 30%;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.form-control {
+    margin-bottom: 2rem;
+    position: relative;
+
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--font-color);
+    padding: 10px 0;
+    color: var(--font-color);
+}
+/* text style for span */
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: none;
+    border-bottom-color: var(--main-color);;
+}
+
+.form-control label {
+    position: absolute;
+    top: 7px;
+    left: 0px;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: var(--main-color);
+    transform: translateY(-30px);
+}
+
+/* text */
+.text {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--font-color);
+    font-size: 12px;
+}
+
+.text a {
+    text-decoration: none;
+    color: rgb(205, 237, 235);
+}

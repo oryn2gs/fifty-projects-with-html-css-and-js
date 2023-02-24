@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #fff;
+    
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ecf0f1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+ 
+}
+
+.kinetic {
+    height: 80px;
+    width: 80px;
+    position: relative;
+}
+
+.kinetic::before,
+.kinetic::after {
+    content: '';
+    height: 0;
+    width: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 50px solid transparent;
+    border-bottom-color: #fff;
+    animation: animateA 2s linear infinite 0.5s;
+}
+
+.kinetic::before {
+    transform: rotate(90deg);
+    animation: animateB 2s linear infinite;
+}
+
+@keyframes animateA {
+    0%, 25% {
+        transform: rotate(0deg);
+    }
+    50%, 75% {
+        transform: rotate(180deg);
+    }
+    75%, 100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateB {
+    0%, 25% {
+        transform: rotate(90deg);
+    }
+    50%, 75% {
+        transform: rotate(270deg);
+    }
+    75%, 100% {
+        transform: rotate(450deg);
+    }
+}
+
